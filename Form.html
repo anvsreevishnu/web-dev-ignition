@@ -1,0 +1,78 @@
+<html>
+<head>
+	<title>Pathashaala</title>
+	<link rel="stylesheet" type="text/css" href="form_style.css">
+	
+	
+	
+	<script>
+		function validUsername() {
+			var username = document.getElementById("username").value;
+			var rel = /^[a-zA-Z\s\'\-]{2,15}$/;
+			
+			if (rel.test(username)) {
+				document.getElementById("usernamePrompt").style.color = "green";
+				document.getElementById("usernamePrompt").innerHTML = "&nbsp;";
+			}
+			else {
+				document.getElementById("usernamePrompt").style.color = "red";
+				document.getElementById("usernamePrompt").innerHTML = "<strong>Enter 2 - 15 characters</strong><br><br>";
+			}
+		}
+
+		function validPassword() {
+			var password = document.getElementById("password").value;
+			var rel = /^[0-9\s\'\-]{4}$/;
+			
+			if (rel.test(password)) {
+				document.getElementById("passwordPrompt").style.color = "green";
+				document.getElementById("passwordPrompt").innerHTML = "&nbsp;";
+			}
+			else {
+				document.getElementById("passwordPrompt").style.color = "red";
+				document.getElementById("passwordPrompt").innerHTML = "<strong>Enter 4 digit</strong><br><br>";
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div id="main">
+		<form>
+			<h1>Questionnaire</h1><br>
+		
+			<label>Username</label>
+			<input type="text" id="username" placeholder="Enter username" onblur="validUsername()" required>
+			<span id="usernamePrompt">&nbsp;</span>
+			<label>Password</label>
+			<input type="password" id="password" onblur="validPassword()" required>
+			<span id="passwordPrompt">&nbsp;</span>
+			
+			<label>What is your name?</label>
+			<input type="text" placeholder="Enter first name">
+			<input type="text" placeholder="Enter last name">
+			
+			<label>What is your age?</label>
+			<input type="number" placeholder="Enter your age" min="1" max="99">
+			
+			<label>Branch<br></label>
+			<input type="radio" name="city" value="CSE">CSE</input>
+			<input type="radio" name="city" value="ECE">ECE</input>
+			<input type="radio" name="city" value="EEE">EEE</input>
+			<input type="radio" name="city" value="MECH">MECH</input>
+			
+			<br><br>
+
+			<input type="checkbox" id="qual1" name="qual1" value="10th">
+			<label for="qual1"> I have completed 10th</label><br>
+			<input type="checkbox" id="qual2" name="qual2" value="12th">
+			<label for="vehicle2"> I have competed 12th</label><br>
+			<input type="checkbox" id="qual3" name="qual3" value="any other">
+			<label for="vehicle3"> any other</label><br><br>
+		
+			<button id="submit">Submit</button>
+		</form>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+
+body {
+	font-family: Arial;
+	text-align: center;
+	margin:50px;
+	background-color: black;
+	color: white;
+}
+
+		main{
+			margin-top: 30px;
+			margin-bottom: 30px;
+			margin-left:auto;
+			margin-right:auto;
+			border: 1px solid white;
+			font-size: 10pt;
+		}
+
+		form{
+			width: 50%;
+			display: inline-block;
+		}
+
+		label{
+			width: 100%;
+			margin: 10px 10px 10px 10px;
+		}
+
+
+		input[type=text], input[type=password], input[type=number] {
+			width: 100%;
+			padding: 5px;
+			margin: 10px;
+			display: inline-block;
+			border: 1px solid white;
+			box-sizing: border-box;
+		}
+
+		input[type="radio"] {
+			padding: 5px;
+			margin: 10px;
+		}
+
+		span{
+			width: 100%;
+			margin-bottom: 10px;
+		}
+
+		#submit{
+			background-color: white; /* Green */
+			border: none;
+			color: black;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+		}

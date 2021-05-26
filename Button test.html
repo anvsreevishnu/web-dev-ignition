@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <title>Button Test</title>
+
+<script type="text/javascript">
+
+function displayInput()
+{
+  var testInput = document.getElementById("name").value;
+  
+  if (testInput.length == 0)
+  {
+    document.getElementById("para").innerHTML = "Type something!";
+  }
+  else
+    document.getElementById("para").innerHTML = testInput;
+}
+
+</script>
+
+</head>
+
+<body>
+ 
+<H1 style="color:blue;">Button Testing</H1>
+
+<H2>Hello there</H2>
+
+<input id="name" type="text"/>
+
+<button onclick="displayInput();">Color It</button>
+
+<p id="para" style="color:blue;"></p>
+
+</body>
+
+</html>
